@@ -26,6 +26,8 @@ for file in data/VOCdevkit/VOC2012/JPEGImages/*.jpg; do mv "$file" data/pascal3d
 rm -r data/VOC*
 
 # create symbolic links for training and testing code
+mkdir -p pose-hg/pose-hg-train/data
+mkdir -p pose-hg/pose-hg-demo/data
 ln -s $PWD/data/pascal3d $PWD/pose-hg/pose-hg-train/data
 ln -s $PWD/data/pascal3d $PWD/pose-hg/pose-hg-demo/data
 
