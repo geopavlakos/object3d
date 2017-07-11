@@ -16,6 +16,7 @@ if model == 'pretrained' then
     m = torch.load('pose-hg-pascal3d.t7')   -- Load pre-trained model
 else
     m = torch.load(model)   -- Load the specified model
+    m:evaluate()
 end
 m:cuda()
 
